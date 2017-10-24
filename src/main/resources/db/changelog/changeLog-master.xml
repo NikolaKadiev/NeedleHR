@@ -6,4 +6,16 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.6
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.6.xsd">
 
+    <changeSet id="1" author="Nikola Kadiev">
+        <createTable tableName="user_account">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="first_name" type="varchar(50)"/>
+            <column name="last_name" type="varchar(50)"/>
+            <column name="password" type="varchar(255)"/>
+            <column name="email" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
 </databaseChangeLog>
